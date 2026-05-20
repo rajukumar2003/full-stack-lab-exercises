@@ -15,7 +15,7 @@ Labs 2 and 3 can be opened directly in a browser.
 
 For Lab 4, use a local server such as VS Code Live Server because it uses `fetch()` and a service worker.
 
-For Lab 5, create a Vite React app and copy `Lab_5_React_ProfileCard/App.jsx` into the generated `src/App.jsx`, then run:
+For Lab 5, open `Lab_5_React_ProfileCard` in the terminal and run:
 
 ```bash
 npm install

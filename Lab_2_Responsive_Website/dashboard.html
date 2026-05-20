@@ -1,23 +1,92 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Dashboard</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduManage | Dashboard</title>
+  <link rel="icon" href="data:,">
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body class="bg-gray-200 p-6">
-  <h1 class="text-3xl font-bold mb-6">Student Dashboard</h1>
+<body>
+  <header class="site-header">
+    <nav class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-5 py-4">
+      <a href="index.html" class="flex items-center gap-3 font-extrabold tracking-tight text-slate-900">
+        <span class="grid h-10 w-10 place-items-center rounded-2xl bg-blue-600 text-white">
+          <i class="fa-solid fa-chart-line"></i>
+        </span>
+        <span>EduManage</span>
+      </a>
+      <div class="flex items-center gap-1">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="courses.html">Courses</a>
+        <a class="nav-link active" href="dashboard.html">Dashboard</a>
+      </div>
+    </nav>
+  </header>
 
-  <div class="grid md:grid-cols-2 gap-6">
-    <div class="bg-white p-6 rounded shadow">
-      <h2 class="text-xl font-bold">Attendance</h2>
-      <p>85%</p>
-    </div>
+  <main class="mx-auto max-w-6xl px-5 py-10">
+    <section class="mb-8">
+      <p class="text-sm font-bold uppercase tracking-[0.2em] text-blue-700">Student Workspace</p>
+      <h1 class="mt-3 text-4xl font-extrabold tracking-tight text-slate-950">Student dashboard</h1>
+      <p class="mt-3 max-w-2xl text-slate-600">Responsive summary panels for attendance, assignments, courses, and events.</p>
+    </section>
 
-    <div class="bg-white p-6 rounded shadow">
-      <h2 class="text-xl font-bold">Assignments</h2>
-      <p>5 Pending</p>
-    </div>
-  </div>
+    <section class="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+      <article class="dashboard-panel rounded-3xl p-6">
+        <i class="fa-solid fa-calendar-check text-2xl text-blue-600"></i>
+        <p class="mt-5 text-sm font-semibold text-slate-500">Attendance</p>
+        <h2 class="mt-1 text-3xl font-extrabold">85%</h2>
+      </article>
+      <article class="dashboard-panel rounded-3xl p-6">
+        <i class="fa-solid fa-file-lines text-2xl text-blue-600"></i>
+        <p class="mt-5 text-sm font-semibold text-slate-500">Assignments</p>
+        <h2 class="mt-1 text-3xl font-extrabold">5 Pending</h2>
+      </article>
+      <article class="dashboard-panel rounded-3xl p-6">
+        <i class="fa-solid fa-book text-2xl text-blue-600"></i>
+        <p class="mt-5 text-sm font-semibold text-slate-500">Courses</p>
+        <h2 class="mt-1 text-3xl font-extrabold">4 Active</h2>
+      </article>
+      <article class="dashboard-panel rounded-3xl p-6">
+        <i class="fa-solid fa-video text-2xl text-blue-600"></i>
+        <p class="mt-5 text-sm font-semibold text-slate-500">Webinars</p>
+        <h2 class="mt-1 text-3xl font-extrabold">2 This Week</h2>
+      </article>
+    </section>
+
+    <section class="mt-6 grid gap-5 lg:grid-cols-[1.2fr_0.8fr]">
+      <article class="dashboard-panel rounded-3xl p-6">
+        <div class="flex items-center justify-between gap-4">
+          <h2 class="text-xl font-extrabold">Current semester progress</h2>
+          <span class="rounded-full bg-blue-50 px-3 py-1 text-sm font-bold text-blue-700">Semester 2</span>
+        </div>
+        <div class="mt-6 space-y-5">
+          <div>
+            <div class="mb-2 flex justify-between text-sm font-semibold"><span>Web Development</span><span>82%</span></div>
+            <div class="h-3 rounded-full bg-slate-100"><div class="h-3 w-[82%] rounded-full bg-blue-600"></div></div>
+          </div>
+          <div>
+            <div class="mb-2 flex justify-between text-sm font-semibold"><span>Cloud Computing</span><span>74%</span></div>
+            <div class="h-3 rounded-full bg-slate-100"><div class="h-3 w-[74%] rounded-full bg-blue-600"></div></div>
+          </div>
+          <div>
+            <div class="mb-2 flex justify-between text-sm font-semibold"><span>Cyber Security</span><span>69%</span></div>
+            <div class="h-3 rounded-full bg-slate-100"><div class="h-3 w-[69%] rounded-full bg-blue-600"></div></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="dashboard-panel rounded-3xl p-6">
+        <h2 class="text-xl font-extrabold">Upcoming items</h2>
+        <ul class="mt-5 space-y-4 text-slate-600">
+          <li class="border-b border-slate-100 pb-4"><strong class="text-slate-900">DBMS quiz</strong><br>Tomorrow, 10:00 AM</li>
+          <li class="border-b border-slate-100 pb-4"><strong class="text-slate-900">React profile card</strong><br>Submission due Friday</li>
+          <li><strong class="text-slate-900">Cloud webinar</strong><br>Saturday, 4:00 PM</li>
+        </ul>
+      </article>
+    </section>
+  </main>
 </body>
 </html>

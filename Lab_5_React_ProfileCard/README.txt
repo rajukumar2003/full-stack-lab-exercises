@@ -1,10 +1,21 @@
+Lab 5 - React Profile Card
 
-Run Commands:
+This folder is a minimal Vite React app.
 
-npm create vite@latest
-Choose React
+Run commands:
 
 npm install
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
 npm run dev
+
+Open the local URL shown in the terminal, usually:
+
+http://localhost:5173/
+
+Implemented:
+
+- Reusable ProfileCard component
+- Props and prop destructuring
+- Array rendering for skills and stats
+- useState hook for follow/unfollow interaction
+- Responsive profile card layout
+- Clean CSS styling with Tailwind CDN available in index.html

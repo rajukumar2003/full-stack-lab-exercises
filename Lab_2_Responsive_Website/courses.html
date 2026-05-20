@@ -1,33 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Courses</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduManage | Courses</title>
+  <link rel="icon" href="data:,">
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body class="bg-gray-100 p-6">
-  <h1 class="text-3xl font-bold mb-6">Courses</h1>
+<body>
+  <header class="site-header">
+    <nav class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-5 py-4">
+      <a href="index.html" class="flex items-center gap-3 font-extrabold tracking-tight text-slate-900">
+        <span class="grid h-10 w-10 place-items-center rounded-2xl bg-blue-600 text-white">
+          <i class="fa-solid fa-book-open"></i>
+        </span>
+        <span>EduManage</span>
+      </a>
+      <div class="flex items-center gap-1">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link active" href="courses.html">Courses</a>
+        <a class="nav-link" href="dashboard.html">Dashboard</a>
+      </div>
+    </nav>
+  </header>
 
-  <div class="grid md:grid-cols-3 gap-6">
-    <div class="bg-white p-4 rounded shadow hover:scale-105 transition">
-      <h2 class="text-xl font-bold">Web Development</h2>
-      <button onclick="openModal()" class="mt-4 bg-blue-600 text-white px-4 py-2 rounded">View</button>
-    </div>
-  </div>
+  <main class="mx-auto max-w-6xl px-5 py-10">
+    <section class="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-end">
+      <div>
+        <p class="text-sm font-bold uppercase tracking-[0.2em] text-blue-700">Available Courses</p>
+        <h1 class="mt-3 text-4xl font-extrabold tracking-tight text-slate-950">Course catalogue</h1>
+        <p class="mt-3 max-w-2xl text-slate-600">A responsive card grid with modal details and custom hover states.</p>
+      </div>
+      <a class="ghost-button px-5 py-3" href="dashboard.html">Student Dashboard</a>
+    </section>
 
-  <div id="modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-    <div class="bg-white p-6 rounded">
-      <h2 class="text-2xl font-bold">Course Details</h2>
-      <p>Introduction to Full Stack Development</p>
-      <button onclick="closeModal()" class="mt-4 bg-red-500 text-white px-4 py-2 rounded">Close</button>
-    </div>
+    <section class="grid gap-5 md:grid-cols-3">
+      <article class="course-card rounded-3xl p-6">
+        <span class="text-sm font-bold text-blue-700">MCA101</span>
+        <h2 class="mt-3 text-2xl font-extrabold">Web Development</h2>
+        <p class="mt-3 text-slate-600">HTML, CSS, JavaScript, and responsive UI fundamentals.</p>
+        <button onclick="openModal('Web Development', 'Covers semantic HTML, Tailwind CSS, JavaScript basics, forms, and responsive layouts.')" class="primary-button mt-6 px-5 py-2.5">View details</button>
+      </article>
+
+      <article class="course-card rounded-3xl p-6">
+        <span class="text-sm font-bold text-blue-700">MCA203</span>
+        <h2 class="mt-3 text-2xl font-extrabold">Cloud Computing</h2>
+        <p class="mt-3 text-slate-600">Cloud services, deployment models, and storage concepts.</p>
+        <button onclick="openModal('Cloud Computing', 'Introduces cloud architecture, service models, virtualization, and deployment workflows.')" class="primary-button mt-6 px-5 py-2.5">View details</button>
+      </article>
+
+      <article class="course-card rounded-3xl p-6">
+        <span class="text-sm font-bold text-blue-700">MCA305</span>
+        <h2 class="mt-3 text-2xl font-extrabold">Cyber Security</h2>
+        <p class="mt-3 text-slate-600">Security principles, risk management, and secure systems.</p>
+        <button onclick="openModal('Cyber Security', 'Focuses on authentication, network protection, vulnerability basics, and security awareness.')" class="primary-button mt-6 px-5 py-2.5">View details</button>
+      </article>
+    </section>
+  </main>
+
+  <div id="modal" class="fixed inset-0 hidden items-center justify-center bg-slate-950/55 p-5">
+    <section class="w-full max-w-md rounded-3xl bg-white p-7 shadow-2xl" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="flex items-start justify-between gap-4">
+        <div>
+          <p class="text-sm font-bold uppercase tracking-[0.2em] text-blue-700">Course Details</p>
+          <h2 id="modalTitle" class="mt-2 text-2xl font-extrabold"></h2>
+        </div>
+        <button onclick="closeModal()" class="grid h-10 w-10 place-items-center rounded-full border border-slate-200 text-slate-500 hover:bg-slate-50" aria-label="Close modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <p id="modalDescription" class="mt-5 leading-7 text-slate-600"></p>
+      <button onclick="closeModal()" class="primary-button mt-7 w-full px-5 py-3">Close</button>
+    </section>
   </div>
 
   <script>
-    function openModal() {
+    function openModal(title, description) {
+      document.getElementById("modalTitle").textContent = title;
+      document.getElementById("modalDescription").textContent = description;
       document.getElementById("modal").classList.remove("hidden");
+      document.getElementById("modal").classList.add("flex");
     }
+
     function closeModal() {
       document.getElementById("modal").classList.add("hidden");
+      document.getElementById("modal").classList.remove("flex");
     }
   </script>
 </body>

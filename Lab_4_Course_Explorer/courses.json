@@ -1,6 +1,72 @@
-
 [
-  {"title":"Web Development","department":"Computer Science"},
-  {"title":"Cloud Computing","department":"IT"},
-  {"title":"Cyber Security","department":"Computer Science"}
+  {
+    "code": "MCA101",
+    "title": "Web Development",
+    "department": "Computer Science",
+    "credits": 4,
+    "instructor": "Dr. Meera Sharma"
+  },
+  {
+    "code": "MCA102",
+    "title": "Database Management Systems",
+    "department": "Computer Science",
+    "credits": 4,
+    "instructor": "Prof. Arvind Rao"
+  },
+  {
+    "code": "MCA103",
+    "title": "Data Structures",
+    "department": "Computer Science",
+    "credits": 4,
+    "instructor": "Dr. Nisha Menon"
+  },
+  {
+    "code": "MCA201",
+    "title": "Cloud Computing",
+    "department": "Information Technology",
+    "credits": 3,
+    "instructor": "Prof. Kiran Joseph"
+  },
+  {
+    "code": "MCA202",
+    "title": "Cyber Security",
+    "department": "Computer Science",
+    "credits": 3,
+    "instructor": "Dr. Priya Iyer"
+  },
+  {
+    "code": "MCA203",
+    "title": "Artificial Intelligence",
+    "department": "Data Science",
+    "credits": 4,
+    "instructor": "Dr. Sameer Khan"
+  },
+  {
+    "code": "MCA204",
+    "title": "Machine Learning",
+    "department": "Data Science",
+    "credits": 4,
+    "instructor": "Prof. Kavya Nair"
+  },
+  {
+    "code": "MCA301",
+    "title": "Software Engineering",
+    "department": "Computer Science",
+    "credits": 3,
+    "instructor": "Dr. Anil Thomas"
+  },
+  {
+    "code": "MCA302",
+    "title": "Mobile Application Development",
+    "department": "Information Technology",
+    "credits": 3,
+    "instructor": "Prof. Suman Das"
+  },
+  {
+    "code": "MCA303",
+    "title": "Human Computer Interaction",
+    "department": "Design Technology",
+    "credits": 3,
+    "instructor": "Dr. Reena Paul"
+  }
 ]

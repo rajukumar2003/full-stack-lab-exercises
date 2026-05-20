@@ -1,1 +1,126 @@
-body { font-family: Arial, sans-serif; }
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --ink: #172033;
+  --muted: #64748b;
+  --line: #dbe3ef;
+  --accent: #2563eb;
+  --accent-dark: #1d4ed8;
+  --surface: #ffffff;
+  --soft: #f5f7fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Inter", Arial, sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at top left, rgba(37, 99, 235, 0.08), transparent 28rem),
+    var(--soft);
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  border-bottom: 1px solid rgba(219, 227, 239, 0.85);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+}
+
+.nav-link {
+  border-radius: 999px;
+  padding: 0.55rem 0.9rem;
+  color: #475569;
+  font-size: 0.92rem;
+  font-weight: 600;
+  transition: background 160ms ease, color 160ms ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background: #eff6ff;
+  color: var(--accent-dark);
+}
+
+.hero-panel {
+  border: 1px solid rgba(219, 227, 239, 0.95);
+  background: rgba(255, 255, 255, 0.76);
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.08);
+}
+
+.metric {
+  border-top: 1px solid var(--line);
+}
+
+.course-card,
+.dashboard-panel {
+  border: 1px solid rgba(219, 227, 239, 0.95);
+  background: var(--surface);
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.course-card:hover,
+.dashboard-panel:hover {
+  border-color: rgba(37, 99, 235, 0.25);
+  box-shadow: 0 18px 42px rgba(15, 23, 42, 0.08);
+  transform: translateY(-3px);
+}
+
+.primary-button {
+  border-radius: 999px;
+  background: var(--accent);
+  color: white;
+  font-weight: 700;
+  transition: background 160ms ease, transform 160ms ease;
+}
+
+.primary-button:hover {
+  background: var(--accent-dark);
+  transform: translateY(-1px);
+}
+
+.ghost-button {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: #334155;
+  font-weight: 700;
+  transition: border-color 160ms ease, color 160ms ease, background 160ms ease;
+}
+
+.ghost-button:hover {
+  border-color: rgba(37, 99, 235, 0.35);
+  background: #eff6ff;
+  color: var(--accent-dark);
+}
+
+.fade-in {
+  animation: fadeIn 520ms ease both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 640px) {
+  .nav-link {
+    padding: 0.5rem 0.65rem;
+    font-size: 0.85rem;
+  }
+}
