@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Registration Form</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6">
+  <form id="studentForm" class="bg-white p-6 rounded shadow max-w-xl mx-auto">
+    <h1 class="text-2xl font-bold mb-4">Student Registration</h1>
+
+    <input type="text" id="name" placeholder="Full Name" class="border p-2 w-full mb-4">
+    <input type="email" id="email" placeholder="Email" class="border p-2 w-full mb-4">
+
+    <select id="course" class="border p-2 w-full mb-4">
+      <option>MCA</option>
+      <option>BCA</option>
+    </select>
+
+    <div class="mb-4">
+      <label><input type="checkbox" name="skills" value="AI"> AI</label>
+      <label class="ml-4"><input type="checkbox" name="skills" value="Cloud"> Cloud</label>
+    </div>
+
+    <button class="bg-blue-600 text-white px-4 py-2 rounded">Submit</button>
+  </form>
+
+  <div id="output" class="max-w-xl mx-auto mt-6"></div>
+
+  <script>
+    document.getElementById("studentForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const name = document.querySelector("#name").value;
+      const email = document.querySelector("#email").value;
+      const course = document.querySelector("#course").value;
+
+      const skills = [];
+      document.querySelectorAll('input[name="skills"]:checked').forEach(skill => {
+        skills.push(skill.value);
+      });
+
+      document.getElementById("output").innerHTML = `
+        <div class="bg-white p-4 rounded shadow">
+          <h2 class="text-xl font-bold">Submitted Details</h2>
+          <p><strong>Name:</strong> ${name}</p>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Course:</strong> ${course}</p>
+          <p><strong>Skills:</strong> ${skills.join(", ")}</p>
+        </div>
+      `;
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduManage Home</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+  <nav class="bg-blue-600 text-white p-4 flex justify-between">
+    <h1 class="text-xl font-bold">EduManage</h1>
+    <div class="space-x-4">
+      <a href="index.html">Home</a>
+      <a href="courses.html">Courses</a>
+      <a href="dashboard.html">Dashboard</a>
+    </div>
+  </nav>
+
+  <section class="text-center py-16">
+    <h2 class="text-4xl font-bold mb-4">Education Management System</h2>
+    <p class="text-lg">Responsive Web Design using Tailwind CSS</p>
+    <i class="fa-solid fa-graduation-cap text-6xl text-blue-600 mt-6"></i>
+  </section>
+
+  <canvas id="myCanvas" width="300" height="100" class="border mx-auto bg-white"></canvas>
+
+  <script>
+    const canvas = document.getElementById("myCanvas");
+    const ctx = canvas.getContext("2d");
+    ctx.fillStyle = "blue";
+    ctx.fillRect(20, 20, 150, 50);
+  </script>
+</body>
+</html>
